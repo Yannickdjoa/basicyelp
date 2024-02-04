@@ -16,7 +16,7 @@ function AddRestaurant() {
                 location,
                 price_range: priceRange,
             })
-            console.log(response.data)
+            console.log(response)
             addRestaurants(response.data.data.restaurant)
         } catch (error) {
             console.log(error)
