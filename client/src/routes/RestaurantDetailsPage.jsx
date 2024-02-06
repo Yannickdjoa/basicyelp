@@ -14,20 +14,32 @@ function RestaurantDetailsPage() {
         const fetchData = async () => {
             const response = await RestaurantFinder.get(`/${id}`)
             console.log(response)
-            setSelectedRestaurant(response.data.data.restaurant)
+            setSelectedRestaurant(response.data.data)
         }
         fetchData()
-    }, [id])
+    }, [id, setSelectedRestaurant])
     return (
         <div>
             {selectedRestaurant && (
                 <>
-                    <h1 className="text-center display-1">{selectedRestaurant.name}</h1>
+                    <h1 className="text-center display-1">
+                        {selectedRestaurant.restaurant.name}
+                    </h1>
                     <div>
-                        <StarsRating />
+                        <StarsRating
+                            rating={
+                                selectedRestaurant.restaurant.average_rating
+                            }
+                        />
                     </div>
+                    <span className="text-warning ml-1">
+                        {selectedRestaurant.restaurant.num_reviews
+
+                            ? `(${selectedRestaurant.restaurant.num_reviews})`
+                            : "(0)"}
+                    </span>
                     <div>
-                        <ReviewsTab />
+                        <ReviewsTab reviews={selectedRestaurant.reviews} />
                     </div>
                     <AddReviewTab />
                 </>
