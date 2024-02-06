@@ -1,0 +1,44 @@
+{
+  "name": "basicyelp",
+  "version": "1.0.0",
+  "description": "this is a portfolio project I wrote to streighthen my knowledge as a full stack engineer. The goal of the project is to showcase all previews skills and technologies learned until this point on the path software engineer at CodeCademy.\r It is a PERN app that allows the user to post a new restaurant with the price range and at the same time customers can review restaurants they visited.",
+  "main": "index.js",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.6.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.3",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+},
+"scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+},
+"eslintConfig": {
+    "extends": [
+        "react-app",
+        "react-app/jest"
+    ]
+},
+"browserslist": {
+    "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+    ],
+    "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+    ]
+},
+"devDependencies": {
+    "prettier": "3.2.4"
+}
+}
